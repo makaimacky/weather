@@ -1,2 +1,2 @@
-# https---github.com-makaimacky-weatherapp
+# weatherapp
 just run it to php version 8
