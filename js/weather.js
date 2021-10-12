@@ -32,10 +32,10 @@ function getVenues(client_id,client_secret,v,limit,near){
 function getDetails(cityDetails){
   $('.appended').remove();
   $.each(cityDetails['response']['venues'], function( key, value ) {
-    $("#near_div").append('<div class="appended" ><p class="light-text suggestion"  onclick="test(`'+cityDetails['response']['venues'][key]['location']['lat']+'`,`'+cityDetails['response']['venues'][key]['location']['lat']+'`)">'+cityDetails['response']['venues'][key]['name']+'</p></div>' );
+    $("#near_div").append('<div class="appended" ><p class="light-text suggestion"  onclick="view_weather(`'+cityDetails['response']['venues'][key]['location']['lat']+'`,`'+cityDetails['response']['venues'][key]['location']['lat']+'`)">'+cityDetails['response']['venues'][key]['name']+'</p></div>' );
   });
 }
-function test(lat,lon){
+function view_weather(lat,lon){
   getWeather(lat,lon);
 }
 
